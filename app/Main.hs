@@ -1,6 +1,11 @@
-module Main (main) where
+module Main where
 
-import Lib
+import Lib (processFile)
 
 main :: IO ()
-main = someFunc
+main = do
+    -- CLI-Args holen
+    args <- getArgs
+    case args of
+        [input] -> parseJSON input
+        _ -> putStrLn "Usage: myproject <input.json>"

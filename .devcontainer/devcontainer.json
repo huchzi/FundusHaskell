@@ -1,10 +1,11 @@
 {
   "name": "Haskell Codespace",
   "image": "haskell:latest",
+  "features": {
+  "ghcr.io/devcontainers/features/haskell:latest": {}
+  },
 
   "postCreateCommand": "stack upgrade || true",
-
-  "features": {},
 
   "customizations": {
     "vscode": {
